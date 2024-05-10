@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5bffecd9e7494087025d62b4/1548692080583-F2PEASGJLFSEEZKG50LO/qi.png">
+    <link rel="stylesheet" href="oq.css" id="tema" />
+    <title>Slider</title>
+    <style>
+      body{
+        background-color: #01192f;
+      }
+      
+      img{
+        width: 100%;
+        height: 350px;
+        box-sizing: border-box;
+        margin-top: 150px;
+      }
+
+      .slider{
+        cursor: pointer;
+        max-width: 500px;
+        margin: auto;
+        position: relative;
+        filter: blur(5px) hue-rotate(320deg);
+        transition: 0.50s;
+      }
+      
+      .slider:hover{
+        filter: blur(0px);
+        cursor: pointer;
+        transition: 0.50s;
+      }
+
+      .slider img{
+        border: double 20px chocolate;
+        display: none;
+        background-color: burlywood;
+        border-radius: 20px;
+        box-shadow: 0px 0px 12px 12px rgba(22,122,128,0.75);
+        -webkit-box-shadow: 0px 0px 12px 12px rgba(22,122,128,0.75);
+        -moz-box-shadow: 0px -12px 12px 12px rgba(22,122,128,0.75);
+      }
+
+      
+      .slider img:first-child{
+        display: block;
+      }
+      
+      .btns{
+        width: 460px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin: 75px auto 0px;
+        position: absolute;
+        top: -55px;
+        left: 20px;
+      }
+
+      .btns button {
+        background-color: white;
+        filter: blur(200px);  
+        width: 50px;
+        font-size: 30px;
+        height: 315px;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slider-img">
+        <img src="./hello.avif" alt="">
+        <img src="./programmer.jpg" alt="">
+        <img src="./repet.jpg" alt="">
+        <img src="./the-end.webp" alt="">      
+      </div>
+
+      <div class="btns">
+        <button id="prev">
+          <i class='bx bxs-chevron-left' ></i>
+        </button>
+        <button id="next">
+          <i class='bx bxs-chevron-right'></i>
+        </button>
+      </div>
+      <div id="div"></div>
+    </div>
+
+    <audio src="./Next.wav"></audio>
+
+
+    <script src="./javascript2.js"></script>
+  </body>
+</html>

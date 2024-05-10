@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5bffecd9e7494087025d62b4/1548692080583-F2PEASGJLFSEEZKG50LO/qi.png">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+
+      body {
+        background-color: #01192f;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: transparent;
+      }
+
+      nav ul li {
+        display: inline-block;
+        padding: 15px;
+        font-size: 18px;
+      }
+
+      nav ul li a {
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .log h3 {
+        margin-top: 7px;
+        color: white;
+        font-size: 25px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .btn {
+        display: none;
+        font-size: 30px;
+        width: 70px;
+        border: none;
+        color: blue;
+        background-color: white;
+      }
+
+      .active {
+        display: block;
+      }
+
+      /*  */
+
+      .slider-img {
+        width: 100%;
+      }
+
+      .slider-img img {
+        width: 1000px;
+        height: 100vh;
+      }
+
+      .slider {
+        cursor: pointer;
+        max-width: 100%;  
+        height: 92vh;
+        position: relative;
+      }
+
+      .slider img {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 2.5s;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .slider img.active {
+        opacity: 1;
+      }
+
+      .btns {
+        width: 97%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin: 100px auto 0px;
+        position: absolute;
+        left: 20px;
+        background-color: transparent;
+      }
+
+      .btns button {
+        margin-top: 200px;
+        border: solid 2px white;
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 30px;
+        color: white;
+        padding: 3px;
+      }
+      @media screen and (max-width: 450px) {
+        nav {
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          background-color: transparent;
+          top: 0;
+          z-index: 1;
+        }
+        
+        nav ul {
+          margin-left: -45px;
+          margin-top: 100px;
+          height: 55vh;
+        }
+
+        nav ul li {
+          display: block;
+          padding: 15px;
+          font-size: 18px;
+          margin: auto;
+          text-align: center;
+        }
+
+        nav ul li a {
+          color: white;
+          font-family: sans-serif;
+        }
+
+        .log h3 {
+          margin-top: 10px;
+          color: white;
+          font-size: 25px;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .btn {
+          margin-top: 8px;
+          display: block;
+          font-size: 35px;
+          width: 50px;
+          height: 50px;
+          border: none;
+          color: white;
+          position: relative;
+          background-color: transparent;
+        }
+
+        .active {
+          display: none;
+        }
+
+        /*  */
+
+        .slider {
+          cursor: pointer;
+          max-width: 100%;
+          height: 92vh;
+          position: relative;
+        }
+
+        .slider {
+          height: 100vh;
+        }
+
+        .slider img {
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          transition: 2.5s;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .slider img.active {
+          opacity: 0;
+        }
+
+        .btns {
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          margin: auto;
+          margin: 100px auto 0px;
+          position: absolute;
+          left: 20px;
+        }
+
+        .btns button {
+          margin-top: 70%;
+          border: solid 2px white;
+          background-color: transparent;
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+          font-size: 30px;
+          color: white;
+          padding: 3px;
+        }
+      }
+    </style>
+  </head>
+  <body onclick="console.log('body');">
+    <nav>
+      <div class="log">
+        <h3>IslomOk</h3>
+      </div>
+
+      <ul class="active">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <button class="btn">
+        <i class="bx bx-menu-alt-right"></i>
+      </button>
+    </nav>
+
+    <div class="slider">
+      <div class="slider-img">
+        <img src="https://c0.wallpaperflare.com/preview/183/501/299/close-up-code-coding-css.jpg" alt="" class="active"/>
+        <img src="https://calcey.com/wp-content/uploads/2019/10/banner.jpg" alt=""/>
+        <img src="https://i.pinimg.com/originals/b9/b9/a4/b9b9a4d432402c52ef3a261a1cedbf04.jpg" alt=""/>
+        <img src="https://i.pinimg.com/originals/66/ad/af/66adaf7071d6c36b30a6dbe984be48dc.jpg" alt=""/>
+
+      </div>
+
+      <div class="btns">
+        <button id="prev">
+          <i class="bx bxs-chevron-left"></i>
+        </button>
+        <button id="next">
+          <i class="bx bxs-chevron-right"></i>
+        </button>
+      </div>
+      <div id="div"></div>
+    </div>
+
+
+    <script src="./javascript2.js"></script>
+    <script src="./javascript.js"></script>
+  </body>
+</html>
